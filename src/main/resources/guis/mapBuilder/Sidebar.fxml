@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane fx:id="sidebar" prefWidth="175.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.mapBuilder.controller.SidebarController">
+   <children>
+      <Accordion maxWidth="175.0" minWidth="175.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <panes>
+            <TitledPane animated="false" expanded="false" text="General">
+               <content>
+                  <VBox maxHeight="140.0" spacing="10.0" style="-fx-background-color: -grey;">
+                     <children>
+                        <Label text="Dimensions">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="dimensionsInput_" />
+                        <Label text="Agent Parameter">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="configInput_" maxHeight="1.7976931348623157E308" minHeight="200.0" />
+                        <HBox alignment="CENTER" maxWidth="1.7976931348623157E308" spacing="10.0">
+                           <children>
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#setDefault" text="Set Default" HBox.hgrow="ALWAYS" />
+                              <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#apply" text="Apply" HBox.hgrow="ALWAYS" />
+                           </children>
+                        </HBox>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </VBox>
+               </content>
+            </TitledPane>
+            <TitledPane animated="false" expanded="false" maxHeight="1.7976931348623157E308" text="Agents">
+               <content>
+                  <VBox alignment="TOP_CENTER" spacing="10.0" style="-fx-background-color: -grey;">
+                     <children>
+                        <ListView fx:id="agentIDListView_" VBox.vgrow="NEVER" />
+                        <HBox alignment="CENTER_RIGHT" spacing="10.0" VBox.vgrow="NEVER">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#addNewAgent" prefWidth="60.0" text="Add" />
+                              <Button mnemonicParsing="false" onAction="#deleteSelectedAgent" prefWidth="60.0" text="Delete" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </TitledPane>
+         </panes>
+      </Accordion>
+      <HBox layoutX="105.0" layoutY="334.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="5.0" />
+   </children>
+</AnchorPane>

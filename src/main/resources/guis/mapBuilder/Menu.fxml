@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<VBox xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="guis.mapBuilder.controller.MenuController">
+    <children>
+        <MenuBar fx:id="menu" nodeOrientation="LEFT_TO_RIGHT" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#newProject" text="New">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="UP" meta="UP" shift="UP"
+                                                    shortcut="DOWN"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#open" text="Open...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="UP" meta="UP" shift="UP"
+                                                    shortcut="DOWN"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveMap_" mnemonicParsing="false" onAction="#save" text="Save">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="UP"
+                                                    shortcut="DOWN"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Save As...">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="UP" meta="UP" shift="DOWN"
+                                                    shortcut="DOWN"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="View">
+                    <items>
+                        <RadioMenuItem fx:id="showStartPositions_" mnemonicParsing="false" selected="true"
+                                       text="Show Start Positions">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="S" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </RadioMenuItem>
+                        <RadioMenuItem fx:id="showTargets_" mnemonicParsing="false" selected="true" text="Show Targets">
+                            <accelerator>
+                                <KeyCodeCombination alt="DOWN" code="T" control="UP" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </RadioMenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Separator prefWidth="200.0"/>
+        <HBox alignment="CENTER_RIGHT" minHeight="30.0" spacing="10.0">
+            <children>
+                <Button maxHeight="25.0" minHeight="25.0" minWidth="75.0" mnemonicParsing="false"
+                        onAction="#validate" text="Validate"/>
+                <Button disable="true" maxHeight="25.0" minHeight="25.0" minWidth="75.0" mnemonicParsing="false"
+                        onAction="#deploy" text="Deploy ..."/>
+            </children>
+            <padding>
+                <Insets right="5.0"/>
+            </padding>
+        </HBox>
+    </children>
+</VBox>

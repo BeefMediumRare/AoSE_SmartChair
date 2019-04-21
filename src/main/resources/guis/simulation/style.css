@@ -1,0 +1,326 @@
+* {
+    -dark-grey: rgb(40, 40, 40);
+    -grey: rgb(83, 83, 83);
+    -light-grey: rgb(127, 127, 127);
+
+
+    -blue: rgb(119,158,199);
+    -green: rgb(80,199,92);/*rgb(83, 166, 94);*/
+    -red: rgb(200, 80, 80);/*rgb(206, 95, 90);*/
+
+    -grey-blue: rgb(100, 110, 122);
+
+    -yellow-green: rgb(220, 231, 117);
+
+    -accent: -grey-blue;
+    -agent-target: -green;
+    -agent-start: -blue;
+
+    -fx-text-fill: white;
+    -fx-box-border: -grey;
+}
+
+.root {
+    -fx-accent: transparent;
+    -fx-focus-color: transparent;
+}
+
+/*          ALERT     */
+.alert-dialog-pane,
+.alert-dialog-pane *.button-bar *.container,
+.alert-dialog-pane:header *.header-panel {
+    -fx-background-color: -grey;
+}
+
+/*        PROGRESS INDICATOR      */
+.progress-indicator {
+    -fx-progress-color: white;
+    -fx-background-color: transparent;
+}
+
+/*          SEPARATOR       */
+.separator
+{
+    -fx-background-color: -light-grey;
+}
+
+.separator *.line
+{
+    -fx-border-style: solid;
+    -fx-border-width: 0px;
+}
+
+/*          PROGRESS BAR     */
+.progress-bar .bar {
+    -fx-background-color: -accent;
+}
+
+.progress-bar .track {
+    -fx-background-color: -light-grey;
+}
+
+/*          SLIDER          */
+.slider .thumb {
+    -fx-background-color: -light-grey;
+}
+
+.slider .thumb:hover,
+.slider .thumb:pressed {
+    -fx-background-color: -accent;
+}
+
+/*        TIME STEP PROGRESS BAR     */
+.time-step-progress-bar .thumb {
+    -fx-background-color: -light-grey;
+    -fx-shape: "M 0,0 V 6 L 5,10 10,6 V 0 Z";
+    -fx-pref-width: 7;
+    -fx-translate-y: 3;
+}
+
+.time-step-progress-bar .track {
+    -fx-background-color: -grey;
+    -fx-pref-height:2;
+}
+
+/*        TIME PROGRESS BAR     */
+.time-progress-bar .thumb {
+    -fx-background-color: -grey;
+    -fx-shape: "M 0,0 V 6 L 5,10 10,6 V 0 Z";
+    -fx-pref-width: 7;
+    -fx-translate-y: 3;
+}
+
+.time-progress-bar .track {
+    -fx-background-color: transparent;
+}
+
+/*          MENU            */
+.menu: showing: hover,
+.menu: showing,
+.menu .context-menu {
+    -fx-background-color: -dark-grey;
+}
+
+.menu: hover,
+.menu-item:focused,
+.menu-item:focused .label {
+    -fx-background-color: -accent;
+}
+
+.menu-bar,
+.menu-item:pressed,
+.menu-item:pressed .label {
+    -fx-background-color: -grey;
+}
+
+.radio-menu-item .radio{
+    -fx-background-color: white;
+}
+
+
+/*          BUTTON            */
+.button {
+    -fx-background-color: white, -grey;
+    -fx-background-insets: 0, 1;
+}
+
+
+.button: hover {
+    -fx-background-color: white, -accent;
+    -fx-background-insets: 0, 1;
+}
+
+.button: pressed {
+    -fx-background-color: white, -dark-grey;
+    -fx-background-insets: 0, 1;
+}
+
+.icon-button: hover {
+     -fx-background-color: -accent;
+ }
+
+.icon-button: pressed {
+    -fx-background-color: -dark-grey;
+}
+
+.toggle-button,
+.icon-button {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0
+}
+
+.toggle-button: hover {
+    -fx-background-color: -accent;
+}
+
+.toggle-button: selected {
+    -fx-background-color: -dark-grey;
+}
+
+/*      TEXT FIELD     */
+.text-field {
+    -fx-background-color: -dark-grey;
+    -fx-accent: -accent;
+    -fx-focus-color: -accent;
+}
+
+/*      TEXT AREA       */
+.text-area {
+    -fx-background-color: transparent;
+    -fx-highlight-fill: -accent;
+    -fx-background-insets: 5;
+}
+
+.text-area .scroll-pane *{
+    -fx-background-color: -dark-grey;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+.text-area * .scroll-bar{
+    -fx-background-color: transparent;
+}
+
+/*      TITLED PANE         */
+.titled-pane {
+    -fx-background-color: -grey;
+}
+
+.titled-pane .title {
+    -fx-background-color: -dark-grey, -light-grey;
+    -fx-background-insets: 0, 1 0 0 0 0;
+    -fx-background-radius: 0;
+}
+
+.titled-pane .title .arrow-button{
+    -fx-background-color: -light-grey;
+    -fx-background-radius: 0;
+}
+
+.titled-pane .title .arrow-button * {
+    -fx-background-insets: 0;
+    -fx-background-color: -grey;
+}
+
+/*          SCROLL PANE     */
+.grid-scroll-pane,
+.grid-scroll-pane .viewport,
+.grid-scroll-pane .corner {
+    -fx-background-color: -dark-grey;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+}
+
+/*      SCROLL BAR      */
+* .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+* .scroll-bar:horizontal .increment-button ,
+* .scroll-bar:horizontal .decrement-button {
+	-fx-background-radius: 0em;
+	-fx-padding:0 0 10 0;
+}
+
+* .scroll-bar:vertical .increment-button ,
+* .scroll-bar:vertical .decrement-button {
+	-fx-background-radius: 0;
+	-fx-padding:5 10 0 0;
+}
+
+*  .scroll-bar .increment-arrow,
+*  .scroll-bar .decrement-arrow
+ {
+	-fx-shape: " ";
+	-fx-padding:0;
+}
+
+* .scroll-bar:horizontal .thumb {
+    -fx-background-insets: 3 1 3 8;
+}
+* .scroll-bar:vertical .thumb {
+    -fx-background-insets: -1 3 1 3;
+}
+
+* .scroll-bar .thumb {
+    -fx-background-color: -light-grey;
+	-fx-background-radius: 2;
+}
+
+* .scroll-bar .thumb:hover {
+    -fx-background-color: -accent;
+}
+
+* .scroll-bar .thumb:pressed {
+    -fx-background-color: -grey;
+}
+
+/*       LIST VIEW           */
+.list-view .corner {
+    -fx-background-color: transparent;
+}
+
+.list-view {
+    -fx-background-color: transparent;
+}
+
+.list-cell {
+    -fx-background-color: -grey, -light-grey;
+    -fx-background-insets: 0, 0 0 1 0;
+}
+
+.list-cell:filled:selected {
+    -fx-background-color: -grey, -accent;
+}
+
+.list-view .scroll-bar:horizontal .thumb {
+    -fx-background-insets: 3 1 3 8;
+}
+.list-view .scroll-bar:vertical .thumb {
+    -fx-background-insets: 2 3 2 3;
+}
+.list-view .scroll-bar .thumb:pressed {
+    -fx-background-color: -dark-grey;
+}
+.list-view .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+/*          GRID              */
+.grid-cell-transparent {
+    -fx-background-color: transparent;
+    -fx-border-color: -grey;
+    -fx-border-width: 0.5;
+}
+
+.grid-cell-dark-grey {
+    -fx-background-color: -dark-grey;
+}
+
+.grid-cell-light-grey {
+    -fx-background-color: -light-grey;
+}
+
+.grid-cell-accent {
+    -fx-background-color: -accent;
+}
+
+.target-cell-half {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, transparent 50%, -agent-target 50%);
+}
+
+.target-cell-full {
+    -fx-background-color: -agent-target;
+}
+
+.start-cell-half {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, -agent-start 50%, transparent 50%);
+}
+
+.start-cell-full {
+    -fx-background-color: -agent-start;
+}
+
+
+
+

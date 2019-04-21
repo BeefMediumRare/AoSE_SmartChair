@@ -1,0 +1,93 @@
+{
+  "type": "object",
+  "required": [
+    "localMap",
+    "priority",
+    "robot"
+  ],
+  "properties": {
+    "robot": {
+      "type": "object",
+      "required": [
+        "size",
+        "speed"
+      ],
+      "properties": {
+        "size": {
+          "description": "The size of the robot in meter",
+          "type": "double"
+        },
+        "speed": {
+          "description": "The speed of the robot in meter per second",
+          "type": "double"
+        }
+      }
+    },
+    "localMap": {
+      "type": "object",
+      "required": [
+        "dimensions",
+        "tMax"
+      ],
+      "properties": {
+        "dimensions": {
+          "description": "The dimension of the local map (must be uneven)",
+          "type": "integer"
+        },
+        "tMax": {
+          "description": "The time depth for the local map",
+          "type": "integer"
+        }
+      }
+    },
+    "priority": {
+      "type": "object",
+      "required": [
+        "base",
+        "noBlock",
+        "block",
+        "fullBlock",
+        "max",
+        "randomFallback"
+      ],
+      "properties": {
+        "base": {
+          "description": "TODO",
+          "type": "integer"
+        },
+        "noBlock": {
+          "description": "TODO",
+          "type": "integer"
+        },
+        "block": {
+          "description": "TODO",
+          "type": "integer"
+        },
+        "fullBlock": {
+          "description": "TODO",
+          "type": "integer"
+        },
+        "max": {
+          "description": "TODO",
+          "type": "integer"
+        },
+        "randomFallback": {
+          "description": "TODO",
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "properties": {
+            "min": {
+              "type": "integer"
+            },
+            "max": {
+              "type": "integer"
+            }
+          }
+        }
+      }
+    }
+  }
+}

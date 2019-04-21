@@ -1,0 +1,23 @@
+{
+  "type": "object",
+  "required": [
+    "dimensions",
+    "staticObstacles",
+    "agentParameter",
+    "agents"
+  ],
+  "properties": {
+    "dimensions": {
+      "type": "integer"
+    },
+    "staticObstacles": {
+      "type": "array"
+    },
+    "agentParameter": {
+      "type": "object"
+    },
+    "agents": {
+      "type": "array"
+    }
+  }
+}

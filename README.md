@@ -1,1 +1,3 @@
 # AoSE_SmartChair
+
+## Setup

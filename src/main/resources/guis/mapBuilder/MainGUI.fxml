@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+            prefWidth="600.0" style="-fx-background-color: -grey;" xmlns="http://javafx.com/javafx/8.0.141"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="guis.mapBuilder.controller.MainController">
+    <top>
+        <VBox>
+            <children>
+                <fx:include fx:id="menu" source="Menu.fxml"/>
+                <AnchorPane prefHeight="20.0" style="-fx-background-color: -dark-grey;">
+                    <children>
+                        <Label fx:id="progressLabel_" minHeight="20.0" AnchorPane.bottomAnchor="0.0"
+                               AnchorPane.rightAnchor="5.0">
+                            <font>
+                                <Font size="11.0"/>
+                            </font>
+                        </Label>
+                    </children>
+                </AnchorPane>
+            </children>
+        </VBox>
+    </top>
+    <left>
+        <fx:include fx:id="toolButtonBar" source="ToolButtonBar.fxml"/>
+    </left>
+    <right>
+        <fx:include fx:id="sidebar" source="Sidebar.fxml"/>
+    </right>
+    <center>
+        <fx:include fx:id="grid" source="Grid.fxml"/>
+    </center>
+    <bottom>
+        <AnchorPane maxHeight="20.0" minHeight="20.0" style="-fx-background-color: -dark-grey;"
+                    BorderPane.alignment="CENTER">
+            <children>
+                <HBox layoutX="575.0" layoutY="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <children>
+                        <Label maxWidth="1.7976931348623157E308" style="-fx-text-fill: -grey;" text="v"/>
+                        <Label fx:id="versionLabel_" maxWidth="1.7976931348623157E308"
+                               style="-fx-text-fill: -grey;" text="0.0.0"/>
+                    </children>
+                </HBox>
+            </children>
+        </AnchorPane>
+    </bottom>
+</BorderPane>

@@ -1,0 +1,11 @@
+{
+  "type": "object",
+  "required": [
+    "aoseProject"
+  ],
+  "properties": {
+    "aoseProject": {
+      "type": "object"
+    }
+  }
+}
