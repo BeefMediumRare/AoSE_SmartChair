@@ -108,6 +108,9 @@ public class CoDyAgent extends Agent {
         return new Date().getTime() - CREATION_TIME;
     }
 
+    /**
+     * Reads the next planned movement and sends a command to the HAL
+     */
     private class MovementBehaviour extends TickerBehaviour {
         MovementBehaviour(@Nonnull Agent agent, long periodInMs) {
             super(agent, periodInMs);
@@ -142,6 +145,10 @@ public class CoDyAgent extends Agent {
         }
     }
 
+    /**
+     * Looks for other agents that registered their service at the yellow pages.
+     * THe found agents are stored and available for the CoDy Agent class.
+     */
     private class CoDyAgentDiscoveryBehaviour extends OneShotBehaviour {
 
         CoDyAgentDiscoveryBehaviour(@Nonnull Agent agent) {
@@ -168,6 +175,9 @@ public class CoDyAgent extends Agent {
         }
     }
 
+    /**
+     * Receives and parses incoming messages.
+     */
     private class MessageReceiveBehaviour extends CyclicBehaviour {
         private final @Nonnull
         MessageTemplate messageTemplate_;
@@ -234,7 +244,10 @@ public class CoDyAgent extends Agent {
         return and(coordinate -> Math.abs(coordinate) <= dimensions + 1, diff.getX(), diff.getY());
     }
 
-    private class PlanningBehaviour extends CyclicBehaviour { // TODO rename
+    /**
+     * This implements the CoDy algorithm.
+     */
+    private class PlanningBehaviour extends CyclicBehaviour {
         private @Nonnull
         LocalMap localMap_;
         private @Nonnull
